@@ -14,7 +14,7 @@ const images = [
 ];
 
 const ListEl = document.querySelector('#gallery');
-// console.log(ListEl);
+
 
 
 
@@ -24,13 +24,10 @@ const ListEl = document.querySelector('#gallery');
 
 const elements = images.map((el) => {
     
-    const imgEl = document.createElement('img');
-    
-    imgEl.url = el.url;
+  const imgEl = document.createElement('img');
+  
+    imgEl.src = el.url;
     imgEl.alt = el.alt;
-
-  
-  
   
 
 const liEl = document.createElement('li');
@@ -39,9 +36,9 @@ const liEl = document.createElement('li');
 
 })
 
-
+if(ListEl){
 ListEl.append(...elements);
-
+}
 
 
 
